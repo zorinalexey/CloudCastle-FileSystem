@@ -1,0 +1,32 @@
+{
+    "name": "cloud-castle/file-system",
+    "description": "Библиотека для работы с файловой системой",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "CloudCastle\\FileSystem\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Unit\\CloudCastle\\Tests\\FileSystem\\": "tests/Unit"
+        }
+    },
+    "authors": [
+        {
+            "name": "Алексей Зорин",
+            "email": "zorinalexey59292@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.4",
+        "ext-fileinfo": "*",
+        "ext-json": "*",
+        "ext-spl": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    }
+}

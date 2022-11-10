@@ -1,0 +1,1016 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Class CloudCastle\FileSystem\File |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-CloudCastle.html">CloudCastle</a>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-CloudCastle.FileSystem.html">FileSystem</a>
+			</li>
+	</ul>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li>
+						<a href="CloudCastle.FileSystem.Dir.html">
+							Dir
+						</a>
+					</li>
+					<li class="active">
+						<a href="CloudCastle.FileSystem.File.html">
+							File
+						</a>
+					</li>
+					<li>
+						<a href="CloudCastle.FileSystem.FileSystem.html">
+							FileSystem
+						</a>
+					</li>
+					<li>
+						<a href="CloudCastle.FileSystem.Json.html">
+							Json
+						</a>
+					</li>
+			</ul>
+		</div>
+
+
+
+
+
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-CloudCastle.FileSystem.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="CloudCastle.FileSystem.File.html">Class</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Class <a href="namespace-CloudCastle.html">CloudCastle</a>\<a href="namespace-CloudCastle.FileSystem.html">FileSystem</a>\<a href="CloudCastle.FileSystem.File.html">File</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+
+
+
+	</table>
+		<div class="classLikeDescription">
+	<div class="description"><p>Класс File</p>
+</div>
+		</div>
+
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-File.html#17" title="Go to source code">File.php</a><br>
+		</div>
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="has" id="_has">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-File.html#152-163" title="Go to source code">has</a>(<span>string|null <var>$file</var> = <span class="php-kw">null</span></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Проверка существования файла
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Проверка существования файла</p>
+</div>
+
+
+							<h4>Returns</h4>
+							<div><p>Если файл существует, то вернет true, иначе false</p>
+</div>
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_has">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="delete" id="_delete">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-File.html#165-176" title="Go to source code">delete</a>(<span>string <var>$file</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Удалить файл
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Удалить файл</p>
+</div>
+
+							<h4>Parameters</h4>
+							<table>
+									<tr>
+										<td><var>$file</var>&nbsp;&nbsp;</td>
+										<td><p>Путь к файлу</p>
+</td>
+									</tr>
+							</table>
+
+							<h4>Returns</h4>
+							<div><p>В случае успеха вернет true, иначе false</p>
+</div>
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_delete">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="rewrite" id="_rewrite">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-File.html#178-190" title="Go to source code">rewrite</a>(<span>string <var>$file</var></span>, <span>string|null <var>$content</var> = <span class="php-kw">null</span></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Перезаписать файл
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Перезаписать файл</p>
+</div>
+
+							<h4>Parameters</h4>
+							<table>
+									<tr>
+										<td><var>$file</var>&nbsp;&nbsp;</td>
+										<td><p>Путь к файлу</p>
+</td>
+									</tr>
+									<tr>
+										<td><var>$content</var>&nbsp;&nbsp;</td>
+										<td><p>Новое содержание файла</p>
+</td>
+									</tr>
+							</table>
+
+							<h4>Returns</h4>
+							<div><p>В случае успеха вернет true, иначе false</p>
+</div>
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_rewrite">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="create" id="_create">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-File.html#192-205" title="Go to source code">create</a>(<span>string <var>$file</var></span>, <span>string <var>$content</var> = <span class="php-kw">null</span></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Создать файл
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Создать файл</p>
+</div>
+
+							<h4>Parameters</h4>
+							<table>
+									<tr>
+										<td><var>$file</var>&nbsp;&nbsp;</td>
+										<td><p>Путь к файлу</p>
+</td>
+									</tr>
+									<tr>
+										<td><var>$content</var>&nbsp;&nbsp;</td>
+										<td><p>Содержание нового файла</p>
+</td>
+									</tr>
+							</table>
+
+							<h4>Returns</h4>
+							<div><p>В случае успеха вернет true, иначе false</p>
+</div>
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_create">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="add" id="_add">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-File.html#207-221" title="Go to source code">add</a>(<span>string <var>$file</var></span>, <span>string <var>$content</var></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Дописать в файл
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Дописать в файл</p>
+</div>
+
+							<h4>Parameters</h4>
+							<table>
+									<tr>
+										<td><var>$file</var>&nbsp;&nbsp;</td>
+										<td><p>Путь к файлу</p>
+</td>
+									</tr>
+									<tr>
+										<td><var>$content</var>&nbsp;&nbsp;</td>
+										<td><p>Контен который необходимо дописать в файл</p>
+</td>
+									</tr>
+							</table>
+
+							<h4>Returns</h4>
+							<div><p>В случае успеха вернет true, иначе false</p>
+</div>
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_add">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="permissions" id="_permissions">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-File.html#223-235" title="Go to source code">permissions</a>(<span>string <var>$file</var></span>, <span>string <var>$permissions</var> = <span class="php-num">0777</span></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Установить права на файл
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Установить права на файл</p>
+</div>
+
+							<h4>Parameters</h4>
+							<table>
+									<tr>
+										<td><var>$file</var>&nbsp;&nbsp;</td>
+										<td><p>Путь к файлу</p>
+</td>
+									</tr>
+									<tr>
+										<td><var>$permissions</var>&nbsp;&nbsp;</td>
+										<td><p>Необходимые права</p>
+</td>
+									</tr>
+							</table>
+
+							<h4>Returns</h4>
+							<div><p>В случае успеха вернет true, иначе false</p>
+</div>
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_permissions">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="read" id="_read">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-File.html#237-248" title="Go to source code">read</a>(<span>string <var>$file</var></span>): string|false</code>
+
+
+	<div class="expandable-collapsedView">
+		Получить контент файла
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Получить контент файла</p>
+</div>
+
+							<h4>Parameters</h4>
+							<table>
+									<tr>
+										<td><var>$file</var>&nbsp;&nbsp;</td>
+										<td><p>Путь к Файлу</p>
+</td>
+									</tr>
+							</table>
+
+							<h4>Returns</h4>
+							<div><p>Контент файла если файл существует и доступен для чтения, иначе false</p>
+</div>
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_read">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="info" id="_info">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-File.html#250-281" title="Go to source code">info</a>(<span>string <var>$file</var></span>): self</code>
+
+
+	<div class="expandable-collapsedView">
+		Получить подробную информацию о файле
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Получить подробную информацию о файле</p>
+</div>
+
+							<h4>Parameters</h4>
+							<table>
+									<tr>
+										<td><var>$file</var>&nbsp;&nbsp;</td>
+										<td><p>Путь к файлу</p>
+</td>
+									</tr>
+							</table>
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_info">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+
+
+
+
+		<table class="table" id="properties">
+			<tr>
+				<th class="table-heading sortable" colspan="4" title="Switch between natural and alphabetical order">Properties</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="aTime" id="$aTime">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">int</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-File.html#20-24" title="Go to source code">$aTime</a></var> = <span class="php-num">0</span></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$aTime">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="basename" id="$basename">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">string|null</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-File.html#26-30" title="Go to source code">$basename</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$basename">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="cTime" id="$cTime">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">int</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-File.html#32-36" title="Go to source code">$cTime</a></var> = <span class="php-num">0</span></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$cTime">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="extension" id="$extension">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">string|null</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-File.html#38-42" title="Go to source code">$extension</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$extension">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="filename" id="$filename">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">string|null</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-File.html#44-48" title="Go to source code">$filename</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$filename">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="group" id="$group">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">int</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-File.html#50-54" title="Go to source code">$group</a></var> = <span class="php-num">0</span></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$group">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="inode" id="$inode">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">int</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-File.html#56-60" title="Go to source code">$inode</a></var> = <span class="php-num">0</span></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$inode">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="linkTarget" id="$linkTarget">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">string|null</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-File.html#62-66" title="Go to source code">$linkTarget</a></var> = <span class="php-kw">null</span></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$linkTarget">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="mTime" id="$mTime">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">int</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-File.html#68-72" title="Go to source code">$mTime</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$mTime">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="owner" id="$owner">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">int</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-File.html#74-78" title="Go to source code">$owner</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$owner">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="path" id="$path">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">string|null</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-File.html#80-84" title="Go to source code">$path</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$path">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="pathname" id="$pathname">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">string|null</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-File.html#86-90" title="Go to source code">$pathname</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$pathname">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="perms" id="$perms">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">int</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-File.html#92-96" title="Go to source code">$perms</a></var> = <span class="php-num">0</span></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$perms">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="realPath" id="$realPath">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">string|null</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-File.html#98-102" title="Go to source code">$realPath</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$realPath">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="size" id="$size">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">int</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-File.html#104-108" title="Go to source code">$size</a></var> = <span class="php-num">0</span></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$size">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="type" id="$type">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">string|null</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-File.html#110-114" title="Go to source code">$type</a></var> = <span class="php-kw">null</span></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$type">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isDir" id="$isDir">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">bool</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-File.html#116-120" title="Go to source code">$isDir</a></var> = <span class="php-kw">false</span></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$isDir">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="executable" id="$executable">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">bool</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-File.html#122-126" title="Go to source code">$executable</a></var> = <span class="php-kw">false</span></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$executable">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isFile" id="$isFile">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">bool</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-File.html#128-132" title="Go to source code">$isFile</a></var> = <span class="php-kw">false</span></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$isFile">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isLink" id="$isLink">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">bool</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-File.html#134-138" title="Go to source code">$isLink</a></var> = <span class="php-kw">false</span></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$isLink">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isReadable" id="$isReadable">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">bool</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-File.html#140-144" title="Go to source code">$isReadable</a></var> = <span class="php-kw">false</span></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$isReadable">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isWritable" id="$isWritable">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">bool</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-File.html#146-150" title="Go to source code">$isWritable</a></var> = <span class="php-kw">false</span></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$isWritable">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen v7.0.0-alpha.3</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>
