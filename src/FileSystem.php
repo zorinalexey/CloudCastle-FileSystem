@@ -12,7 +12,7 @@ namespace CloudCastle\FileSystem;
  * @author Зорин Алексей <zorinalexey59292@gmail.com>
  * @copyright 2022 разработчик Зорин Алексей Евгеньевич.
  */
-abstract class FileSystem
+final class FileSystem
 {
 
     /**
@@ -54,7 +54,7 @@ abstract class FileSystem
     /**
      * Конструктор класса
      */
-    protected function __construct()
+    private function __construct()
     {
         $this->dir = new Dir();
         $this->file = new File();
@@ -64,13 +64,14 @@ abstract class FileSystem
 
     /**
      * Получить текущий объект текущего класса
+     * 
      * @return $this
      */
     public static function instance(): self
     {
         $class = get_called_class();
         if ( ! isset(self::$obj[$class])) {
-            self::$obj[$class] = new $class();
+            self::$obj[$class] = new self();
         }
         return self::$obj[$class];
     }
