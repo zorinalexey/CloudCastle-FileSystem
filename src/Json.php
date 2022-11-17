@@ -19,6 +19,7 @@ final class Json
 
     /**
      * Получить объект из json файла
+     * 
      * @param string $jsonFile Путь к json файлу
      * @return stdClass Объект сформированый в результате декодирования содержимого json файла
      */
@@ -36,6 +37,7 @@ final class Json
 
     /**
      * Создать новый json файл
+     * 
      * @param string $jsonFile Путь к json файлу
      * @param mixed $data Данные которые необходимо конвертирорвать в json и записать в файл
      * @return bool В случае успеха вернет true, иначе false
@@ -54,6 +56,7 @@ final class Json
 
     /**
      * Перезаписать json файл
+     * 
      * @param string $jsonFile Путь к json файлу
      * @param mixed $data Данные которые необходимо конвертирорвать в json и записать в файл
      * @return bool В случае успеха вернет true, иначе false
@@ -70,6 +73,7 @@ final class Json
 
     /**
      * Удалить json файл
+     * 
      * @param string $jsonFile  Путь к json файлу
      * @return bool В случае успеха вернет true, иначе false
      */
@@ -83,6 +87,7 @@ final class Json
 
     /**
      * Проверить является ли файл json файлом
+     * 
      * @param string $jsonFile  Путь к json файлу
      * @return bool В случае успеха вернет true, иначе false
      */
@@ -97,6 +102,7 @@ final class Json
 
     /**
      * Сформировать строку json из массива или объекта
+     * 
      * @param mixed $data Массив или объект
      * @param int $format Набор констант применяемых к json_encode
      * @return string|false Строка json отформатированая в соответствии с $format

@@ -19,138 +19,161 @@ class File
 
     /**
      * Время последнего доступа к файлу
+     * 
      * @var int
      */
     public int $aTime = 0;
 
     /**
      * Базовое имя файла
+     * 
      * @var string
      */
     public string $basename = '';
 
     /**
      * Время последнего изменения индексного дескриптора файла
+     * 
      * @var int
      */
     public int $cTime = 0;
 
     /**
      * Расширение файла
+     * 
      * @var string
      */
     public string $extension = '';
 
     /**
      * Имя файла
+     * 
      * @var string
      */
     public string $filename = '';
 
     /**
      * Группа файла
+     * 
      * @var int
      */
     public int $group = 0;
 
     /**
      * Индексный дескриптор для файла
+     * 
      * @var int
      */
     public int $inode = 0;
 
     /**
      * Путь ссылки
+     * 
      * @var string
      */
     public string $linkTarget = '';
 
     /**
      * Время последнего изменения
+     * 
      * @var int
      */
     public int $mTime = 0;
 
     /**
      * Владелец файла
+     * 
      * @var int
      */
     public int $owner = 0;
 
     /**
      * Путь без имени файла
+     * 
      * @var string
      */
     public string $path = '';
 
     /**
      * Путь к файлу
+     * 
      * @var string
      */
     public string $pathname = '';
 
     /**
      * Список разрешений
+     * 
      * @var int
      */
     public int $perms = 0;
 
     /**
      * Абсолютный путь к файлу
+     * 
      * @var string
      */
     public string $realPath = '';
 
     /**
      * Размер файла
+     * 
      * @var int
      */
     public int $size = 0;
 
     /**
      * Тип файла
+     * 
      * @var string
      */
     public string $type = '';
 
     /**
      * Является ли файл каталогом
+     * 
      * @var bool
      */
     public bool $isDir = false;
 
     /**
      * Является ли файл исполняемым
+     * 
      * @var bool
      */
     public bool $executable = false;
 
     /**
      * Ссылается ли объект на обычный файл
+     * 
      * @var bool
      */
     public bool $isFile = false;
 
     /**
      * Является ли файл ссылкой
+     * 
      * @var bool
      */
     public bool $isLink = false;
 
     /**
      * Является ли файл доступным для чтения
+     * 
      * @var bool
      */
     public bool $isReadable = false;
 
     /**
      * Является ли файл доступным для записи
+     * 
      * @var bool
      */
     public bool $isWritable = false;
 
     /**
      * Проверка существования файла
+     * 
      * @param string|null $file
      * @return bool Если файл существует, то вернет true, иначе false
      */
@@ -164,6 +187,7 @@ class File
 
     /**
      * Удалить файл
+     * 
      * @param string $file Путь к файлу
      * @return bool В случае успеха вернет true, иначе false
      */
@@ -177,6 +201,7 @@ class File
 
     /**
      * Перезаписать файл
+     * 
      * @param string $file Путь к файлу
      * @param string $content Новое содержание файла
      * @return bool В случае успеха вернет true, иначе false
@@ -191,6 +216,7 @@ class File
 
     /**
      * Создать файл
+     * 
      * @param string $file Путь к файлу
      * @param string|null $content Содержание нового файла
      * @return bool В случае успеха вернет true, иначе false
@@ -206,6 +232,7 @@ class File
 
     /**
      * Дописать в файл
+     * 
      * @param string $file Путь к файлу
      * @param string $content Контен который необходимо дописать в файл
      * @return bool В случае успеха вернет true, иначе false
@@ -222,6 +249,7 @@ class File
 
     /**
      * Установить права на файл
+     * 
      * @param string $file Путь к файлу
      * @param int $permissions Необходимые права
      * @return true|false В случае успеха вернет true, иначе false
@@ -236,6 +264,7 @@ class File
 
     /**
      * Получить контент файла
+     * 
      * @param string $file Путь к Файлу
      * @return string|false Контент файла если файл существует и доступен для чтения, иначе false
      */
@@ -249,6 +278,7 @@ class File
 
     /**
      * Получить подробную информацию о файле
+     * 
      * @param string $file Путь к файлу
      * @return self
      */
