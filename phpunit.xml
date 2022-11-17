@@ -2,7 +2,7 @@
 <phpunit colors="true">
     <testsuites>
         <testsuite name="FileSystem">
-            <directory>tests/</directory>
+            <directory>src/</directory>
         </testsuite>
     </testsuites>
 </phpunit>

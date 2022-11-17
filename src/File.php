@@ -25,9 +25,9 @@ class File
 
     /**
      * Базовое имя файла
-     * @var string|null
+     * @var string
      */
-    public ?string $basename;
+    public string $basename = '';
 
     /**
      * Время последнего изменения индексного дескриптора файла
@@ -37,15 +37,15 @@ class File
 
     /**
      * Расширение файла
-     * @var string|null
+     * @var string
      */
-    public ?string $extension;
+    public string $extension = '';
 
     /**
      * Имя файла
-     * @var string|null
+     * @var string
      */
-    public ?string $filename;
+    public string $filename = '';
 
     /**
      * Группа файла
@@ -61,33 +61,33 @@ class File
 
     /**
      * Путь ссылки
-     * @var string|null
+     * @var string
      */
-    public ?string $linkTarget = null;
+    public string $linkTarget = '';
 
     /**
      * Время последнего изменения
      * @var int
      */
-    public int $mTime;
+    public int $mTime = 0;
 
     /**
      * Владелец файла
      * @var int
      */
-    public ?int $owner;
+    public int $owner = 0;
 
     /**
      * Путь без имени файла
-     * @var string|null
+     * @var string
      */
-    public ?string $path;
+    public string $path = '';
 
     /**
      * Путь к файлу
-     * @var string|null
+     * @var string
      */
-    public ?string $pathname;
+    public string $pathname = '';
 
     /**
      * Список разрешений
@@ -97,9 +97,9 @@ class File
 
     /**
      * Абсолютный путь к файлу
-     * @var string|null
+     * @var string
      */
-    public ?string $realPath;
+    public string $realPath = '';
 
     /**
      * Размер файла
@@ -109,9 +109,9 @@ class File
 
     /**
      * Тип файла
-     * @var string|null
+     * @var string
      */
-    public ?string $type = null;
+    public string $type = '';
 
     /**
      * Является ли файл каталогом
@@ -154,9 +154,9 @@ class File
      * @param string|null $file
      * @return bool Если файл существует, то вернет true, иначе false
      */
-    public static function has(?string $file = null): bool
+    public static function has(string $file = null): bool
     {
-        if (is_file($file)) {
+        if ($file AND is_file($file)) {
             return true;
         }
         return false;
@@ -178,10 +178,10 @@ class File
     /**
      * Перезаписать файл
      * @param string $file Путь к файлу
-     * @param string|null $content Новое содержание файла
+     * @param string $content Новое содержание файла
      * @return bool В случае успеха вернет true, иначе false
      */
-    public static function rewrite(string $file, ?string $content = null): bool
+    public static function rewrite(string $file, string $content): bool
     {
         if (self::has($file) AND self::delete($file)) {
             return self::create($file, $content);
@@ -192,13 +192,13 @@ class File
     /**
      * Создать файл
      * @param string $file Путь к файлу
-     * @param string $content Содержание нового файла
+     * @param string|null $content Содержание нового файла
      * @return bool В случае успеха вернет true, иначе false
      */
     public static function create(string $file, ?string $content = null): bool
     {
         if (Dir::create(dirname($file), 0777, true) AND ! self::has($file)) {
-            file_put_contents($file, $content, LOCK_EX);
+            file_put_contents($file, (string)$content, LOCK_EX);
             return self::has($file);
         }
         return false;
@@ -223,10 +223,10 @@ class File
     /**
      * Установить права на файл
      * @param string $file Путь к файлу
-     * @param string $permissions Необходимые права
-     * @return bool В случае успеха вернет true, иначе false
+     * @param int $permissions Необходимые права
+     * @return true|false В случае успеха вернет true, иначе false
      */
-    public static function permissions(string $file, int $permissions = 0777): bool
+    public static function permissions(string $file, int $permissions = 0777)
     {
         if (self::has($file) AND chmod($file, $permissions)) {
             return true;

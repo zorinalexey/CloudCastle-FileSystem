@@ -17,6 +17,7 @@ class Dir
 
     /**
      * Проверка наличия дирректории
+     * 
      * @param string|null $dir Путь до дирректории
      * @return bool Если дирректория найдена, то вернет true, иначе false
      */
@@ -30,8 +31,9 @@ class Dir
 
     /**
      * Создать дирректорию
-     * @param string|null $dir Путь дирректории которую необходимо создать
-     * @param string $permissions Права на дирректорию
+     * 
+     * @param string $dir Путь дирректории которую необходимо создать
+     * @param int $permissions Права на дирректорию
      * @param bool $recursive Создать рекурсивно
      * @return bool В случае успеха вернет true, иначе false
      */
@@ -45,8 +47,9 @@ class Dir
 
     /**
      * Установить права на дирректорию
+     * 
      * @param string $dir Путь к дирректории
-     * @param string $permissions Необходимые права
+     * @param int $permissions Необходимые права
      * @return bool В случае успеха вернет true, иначе false
      */
     public static function permissions(string $dir, int $permissions = 0777): bool
@@ -59,7 +62,8 @@ class Dir
 
     /**
      * Удалить дирректорию рекурсивно
-     * @param string|null $dir Путь к дирректории
+     * 
+     * @param string $dir Путь к дирректории
      * @param bool $recursive Удалить дирректорию рекурсивно
      * @return bool В случае успеха вернет true, иначе false
      */
@@ -76,6 +80,7 @@ class Dir
 
     /**
      * Сканировать дирректорию
+     * 
      * @param string $dir Путь к дирректории
      * @return array Массив с файлами и каталогами директории
      */
@@ -96,6 +101,7 @@ class Dir
 
     /**
      * Получить подробную информацию о директории
+     * 
      * @param string $dir Путь к дирректории
      * @return File Объект класса File заполненый информацией об указаной директории
      */
@@ -106,6 +112,7 @@ class Dir
 
     /**
      * Рекурсивное удаление дирректории вместе содержимым
+     * 
      * @param string $dir Путь к дирректории
      * @return void
      */
@@ -118,6 +125,9 @@ class Dir
             } elseif (self::has($file)) {
                 self::delete($file, true);
             }
+        }
+        if(!self::scan($dir)){
+            self::delete($dir);
         }
     }
 
