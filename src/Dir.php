@@ -107,7 +107,10 @@ class Dir
      */
     public static function info(string $dir): File
     {
-        return File::info($dir);
+        if(self::has($dir)){
+            return File::info($dir);
+        }
+        return new File();
     }
 
     /**
