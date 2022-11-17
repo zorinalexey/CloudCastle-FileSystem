@@ -23,8 +23,8 @@ class Dir
      */
     public static function has(?string $dir = null): bool
     {
-        if ($dir) {
-            return is_dir($dir);
+        if (self::info($dir)->isDir) {
+            return true;
         }
         return false;
     }
@@ -107,10 +107,7 @@ class Dir
      */
     public static function info(string $dir): File
     {
-        if(self::has($dir)){
-            return File::info($dir);
-        }
-        return new File();
+        return File::info($dir);
     }
 
     /**

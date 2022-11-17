@@ -32,12 +32,12 @@ class Link
      * Проверка наличия ссылки
      * 
      * @param string|null $link Путь до ссылке
-     * @return bool Если ссылке найдена, то вернет true, иначе false
+     * @return bool Если ссылка найдена, то вернет true, иначе false
      */
     public static function has(?string $link = null): bool
     {
-        if ($link) {
-            return is_link($link);
+        if (File::info($link)->isLink) {
+            return true;
         }
         return false;
     }
