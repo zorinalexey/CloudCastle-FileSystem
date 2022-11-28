@@ -17,39 +17,36 @@ class Dir
 
     /**
      * Проверка наличия дирректории
-     * 
      * @param string|null $dir Путь до дирректории
      * @return bool Если дирректория найдена, то вернет true, иначе false
      */
     public static function has(?string $dir = null): bool
     {
-        if (self::info($dir)->isDir) {
-            return true;
+        if ($dir) {
+            return is_dir($dir);
         }
         return false;
     }
 
     /**
      * Создать дирректорию
-     * 
-     * @param string $dir Путь дирректории которую необходимо создать
-     * @param int $permissions Права на дирректорию
+     * @param string|null $dir Путь дирректории которую необходимо создать
+     * @param string $permissions Права на дирректорию
      * @param bool $recursive Создать рекурсивно
      * @return bool В случае успеха вернет true, иначе false
      */
-    public static function create(?string $dir = null, int $permissions = 0777, bool $recursive = true): bool
+    public static function create(?string $dir = null, int $permissions = 0777, bool $recursive = true): File
     {
         if ( ! self::has($dir) AND $dir AND mkdir($dir, $permissions, $recursive)) {
-            return true;
+            return self::info($dir);
         }
-        return self::has($dir);
+        return self::info($dir);
     }
 
     /**
      * Установить права на дирректорию
-     * 
      * @param string $dir Путь к дирректории
-     * @param int $permissions Необходимые права
+     * @param string $permissions Необходимые права
      * @return bool В случае успеха вернет true, иначе false
      */
     public static function permissions(string $dir, int $permissions = 0777): bool
@@ -62,8 +59,7 @@ class Dir
 
     /**
      * Удалить дирректорию рекурсивно
-     * 
-     * @param string $dir Путь к дирректории
+     * @param string|null $dir Путь к дирректории
      * @param bool $recursive Удалить дирректорию рекурсивно
      * @return bool В случае успеха вернет true, иначе false
      */
@@ -80,7 +76,6 @@ class Dir
 
     /**
      * Сканировать дирректорию
-     * 
      * @param string $dir Путь к дирректории
      * @return array Массив с файлами и каталогами директории
      */
@@ -101,7 +96,6 @@ class Dir
 
     /**
      * Получить подробную информацию о директории
-     * 
      * @param string $dir Путь к дирректории
      * @return File Объект класса File заполненый информацией об указаной директории
      */
@@ -112,7 +106,6 @@ class Dir
 
     /**
      * Рекурсивное удаление дирректории вместе содержимым
-     * 
      * @param string $dir Путь к дирректории
      * @return void
      */
@@ -125,9 +118,6 @@ class Dir
             } elseif (self::has($file)) {
                 self::delete($file, true);
             }
-        }
-        if(!self::scan($dir)){
-            self::delete($dir);
         }
     }
 

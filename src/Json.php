@@ -14,22 +14,21 @@ use \stdClass;
  * @author Зорин Алексей <zorinalexey59292@gmail.com>
  * @copyright 2022 разработчик Зорин Алексей Евгеньевич.
  */
-final class Json
+class Json
 {
 
     /**
      * Получить объект из json файла
-     * 
-     * @param string $jsonFile Путь к json файлу
+     * @param string|null $jsonFile Путь к json файлу
      * @return stdClass Объект сформированый в результате декодирования содержимого json файла
      */
-    public static function read(string $jsonFile): stdClass
+    public static function read(?string $jsonFile = null): stdClass
     {
         $data = new stdClass;
         if (File::has($jsonFile)) {
             $info = File::info($jsonFile);
-            if ($info->extension === 'json' AND $data = File::read($jsonFile)) {
-                $data = json_decode($data);
+            if ($info->extension === 'json') {
+                $data = json_decode(File::read($jsonFile));
             }
         }
         return $data;
@@ -37,16 +36,15 @@ final class Json
 
     /**
      * Создать новый json файл
-     * 
      * @param string $jsonFile Путь к json файлу
-     * @param mixed $data Данные которые необходимо конвертирорвать в json и записать в файл
+     * @param object|array $data Данные которые необходимо конвертирорвать в json и записать в файл
      * @return bool В случае успеха вернет true, иначе false
      */
-    public static function create(string $jsonFile, $data): bool
+    public static function create(string $jsonFile, $data = false): bool
     {
         $content = false;
         if (is_object($data) OR is_array($data)) {
-            $content = self::toString($data);
+            $content = json_encode($data, JSON_PRETTY_PRINT);
         }
         if ( ! File::has($jsonFile) AND $content) {
             return File::create($jsonFile, $content);
@@ -56,7 +54,6 @@ final class Json
 
     /**
      * Перезаписать json файл
-     * 
      * @param string $jsonFile Путь к json файлу
      * @param mixed $data Данные которые необходимо конвертирорвать в json и записать в файл
      * @return bool В случае успеха вернет true, иначе false
@@ -73,7 +70,6 @@ final class Json
 
     /**
      * Удалить json файл
-     * 
      * @param string $jsonFile  Путь к json файлу
      * @return bool В случае успеха вернет true, иначе false
      */
@@ -87,7 +83,6 @@ final class Json
 
     /**
      * Проверить является ли файл json файлом
-     * 
      * @param string $jsonFile  Путь к json файлу
      * @return bool В случае успеха вернет true, иначе false
      */
@@ -96,21 +91,6 @@ final class Json
         $info = File::info($jsonFile);
         if ($info->extension === 'json') {
             return true;
-        }
-        return false;
-    }
-
-    /**
-     * Сформировать строку json из массива или объекта
-     * 
-     * @param mixed $data Массив или объект
-     * @param int $format Набор констант применяемых к json_encode
-     * @return string|false Строка json отформатированая в соответствии с $format
-     */
-    public static function toString($data, int $format = JSON_PRETTY_PRINT)
-    {
-        if (is_array($data) OR is_object($data)) {
-            return json_encode($data, $format);
         }
         return false;
     }
